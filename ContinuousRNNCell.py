@@ -42,16 +42,13 @@ class forceRNNCell(tf.contrib.rnn.RNNCell):
         return self.neuron_size
 
     def __call__(self, inputs, state):
-        # print('inside call state', state)
-        # print('inside call ######', inputs)
-        #print('This is the updated version')
 
         r = tf.tanh(state)
         d_state = -state + self.g * tf.matmul(r, self.net_weights) + tf.matmul(tf.matmul(r, self.w), self.fb_weights)  \
                      + tf.matmul(inputs, self.input_weights)
 
         next_state = state + (d_state * self.dt)/self.tau
-        #output = tf.tensordot(tf.tanh(next_state), self.w, axes=1)  # z_hat should be obtained from next state (idea of FORCE)
+        
 
         return next_state, next_state
 
