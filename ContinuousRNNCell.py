@@ -8,6 +8,8 @@ RNNCell where states are updated based on the model used in FORCE training metho
     state size is [batch_size, cell.state_size]
     output size is [batch_size, time_step, cell.output_dim]
     
+author: Elham
+    
     *******************************  UPDATED on July 30    ***********************************  
  """
 
