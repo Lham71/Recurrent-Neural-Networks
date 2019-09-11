@@ -10,7 +10,7 @@ RNNCell where states are updated based on the model used in FORCE training metho
     
 author: Elham
     
-    *******************************  UPDATED on July 30    ***********************************  
+    *******************************  UPDATED on July 30, 2019    ***********************************  
  """
 
 import tensorflow as tf
